@@ -1,0 +1,37 @@
+Task Requirements
+
+Write matrix multiplication programs in Python for a random(n,n) 
+matrix. Write the same program with numpy. 
+Measure time for n=10, 100, 1000 ... and so on until you get a good 
+enough data set. Plot the Time Vs Input graph using matplotlib 
+(for both normal python and numpy). Try to find the reason on why 
+numpy is faster (if it is)
+
+As a bonus you can also try adding @numba.jit to the for loop and 
+see the improvement in timings (if any).
+
+Please share the github link for the repo containing:
+
+PNG images of all the graphs
+Relevant source code
+The explanation in README.md
+
+
+To Do:
+1. Learn how to do matrix multiplication ()
+2. Create a python script that multiplies 2 n by n matrices ()
+3. Get the time it takes for the operation ()
+   ||- Do this for 0 - 100 (interval: 10), 100 - 1000 (interval: 100),
+       1000 - 10000 (interval: 10000) -> hopefully this will not take forever
+4. Save data to a csv file ()
+   ||- Format:
+   Input (n) | Time
+5. Learn about numpy arrays 
+   ||- Why are they faster than regular lists?
+6. Repeat the same process above for numpy arrays
+7. In the main program
+   ||- Read the csv files
+   ||- Plot them using plt
+8. Try out @numba.jit and plot the data using it
+9. Integrate all the graphs to one to discern the patterns
+
