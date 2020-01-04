@@ -18,11 +18,12 @@ The explanation in README.md
 
 
 To Do:
-1. Learn how to do matrix multiplication ()
-2. Create a python script that multiplies 2 n by n matrices ()
+1. Learn how to do matrix multiplication (/)
+2. Create a python script that multiplies 2 n by n matrices (/)
 3. Get the time it takes for the operation ()
+   ||- Generate random matrices
    ||- Do this for 0 - 100 (interval: 10), 100 - 1000 (interval: 100),
-       1000 - 10000 (interval: 10000) -> hopefully this will not take forever
+       -> hopefully this will not take forever
 4. Save data to a csv file ()
    ||- Format:
    Input (n) | Time
