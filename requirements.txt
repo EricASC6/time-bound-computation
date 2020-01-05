@@ -31,8 +31,8 @@ To Do:
    ||- Why are they faster than regular lists? ()
 6. Repeat the same process above for numpy arrays (/)
 7. In the main program 
-   ||- Read the csv files
-   ||- Plot them using plt
+   ||- Read the csv files (/)
+   ||- Plot them using plt (/)
 8. Try out @numba.jit and plot the data using it
-9. Integrate all the graphs to one to discern the patterns
+9. Integrate all the graphs to one to discern the patterns 
 
