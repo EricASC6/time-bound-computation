@@ -20,17 +20,17 @@ The explanation in README.md
 To Do:
 1. Learn how to do matrix multiplication (/)
 2. Create a python script that multiplies 2 n by n matrices (/)
-3. Get the time it takes for the operation ()
-   ||- Generate random matrices ()
+3. Get the time it takes for the operation (/)
+   ||- Generate random matrices (/)
    ||- Do this for 0 - 1000 (interval: 10),
        -> hopefully this will not take forever
-4. Save data to a csv file ()
+4. Save data to a csv file (/)
    ||- Format:
    Input (n) | Time
 5. Learn about numpy arrays 
-   ||- Why are they faster than regular lists?
-6. Repeat the same process above for numpy arrays
-7. In the main program
+   ||- Why are they faster than regular lists? ()
+6. Repeat the same process above for numpy arrays (/)
+7. In the main program 
    ||- Read the csv files
    ||- Plot them using plt
 8. Try out @numba.jit and plot the data using it

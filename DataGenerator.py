@@ -1,18 +1,22 @@
 import matrix
 import csv
+import numpy as np
+import time
 
 
 class DataGenerator:
-    def __init__(self, high, interval, min_val, max_val, path):
+    min_val = -10
+    max_val = 10
+
+    def __init__(self, high, interval, path, numpy=False):
         self.low = 0
         self.high = high
         self.interval = interval
-        self.min_val = min_val
-        self.max_val = max_val
         self.path = path
+        self.numpy = numpy
 
     def generate_matrix(self, n, m):
-        return matrix.generate_matrix(n, m, self.min_val, self.max_val)
+        return matrix.generate_matrix(n, m, DataGenerator.min_val, DataGenerator.max_val)
 
     def get_performance(self, matrix_1, matrix_2):
         return matrix._time(matrix.multiply, matrix_1, matrix_2)
@@ -27,8 +31,19 @@ class DataGenerator:
         with open(self.path, "w") as csv_file:
             csv_writer = csv.writer(csv_file)
             csv_writer.writerow(["Input", "Time"])
+            if not self.numpy:
+                for i in range(self.low, self.high + 1, self.interval):
+                    data = self.get_input_vs_time(i)
+                    csv_writer.writerow(data)
+            else:
+                for i in range(self.low, self.high + 1, self.interval):
+                    print(i)
+                    matrix_1 = np.random.rand(i, i)
+                    matrix_2 = np.random.rand(i, i)
 
-            for i in range(self.low, self.high + 1, self.interval):
-                print(i)
-                data = self.get_input_vs_time(i)
-                csv_writer.writerow(data)
+                    figs = 1000000
+                    t1 = time.time()
+                    matrix_1.dot(matrix_2)
+                    t2 = time.time()
+                    total = int((t2 - t1) * figs) / figs * 1000
+                    csv_writer.writerow([i, total])
