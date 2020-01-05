@@ -17,21 +17,18 @@ class DataGenerator:
     def get_performance(self, matrix_1, matrix_2):
         return matrix._time(matrix.multiply, matrix_1, matrix_2)
 
-    def get_input_vs_time(self):
-        data = []
-        for i in range(self.high + 1):
-            matrix_1 = self.generate_matrix(i, i)
-            matrix_2 = self.generate_matrix(i, i)
-            time = self.get_performance(matrix_1, matrix_2)
-            data.append([i, time])
-        return data
+    def get_input_vs_time(self, i):
+        matrix_1 = self.generate_matrix(i, i)
+        matrix_2 = self.generate_matrix(i, i)
+        time = self.get_performance(matrix_1, matrix_2)
+        return [i, time]
 
-    def save_to_csv(self, data):
+    def generate(self):
         with open(self.path, "w") as csv_file:
             csv_writer = csv.writer(csv_file)
             csv_writer.writerow(["Input", "Time"])
-            csv_writer.writerows(data)
 
-    def generate(self):
-        data = self.get_input_vs_time()
-        self.save_to_csv(data)
+            for i in range(self.low, self.high + 1, self.interval):
+                print(i)
+                data = self.get_input_vs_time(i)
+                csv_writer.writerow(data)

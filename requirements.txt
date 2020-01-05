@@ -22,7 +22,7 @@ To Do:
 2. Create a python script that multiplies 2 n by n matrices (/)
 3. Get the time it takes for the operation ()
    ||- Generate random matrices ()
-   ||- Do this for 0 - 100 (interval: 10), 100 - 1000 (interval: 100),
+   ||- Do this for 0 - 1000 (interval: 10),
        -> hopefully this will not take forever
 4. Save data to a csv file ()
    ||- Format:
