@@ -5,7 +5,7 @@ Comparing the input vs. time graph of performing matrix multiplication with pyth
 ## Why Numpy Destroys Python in speed
 
 ```python
-   import numpy
+   import numpy as np
 
    lst = [1, 2, 3] # slow
    numpy_arr = np.array([1, 2, 3]) # super fast
