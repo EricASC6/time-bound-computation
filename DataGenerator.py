@@ -5,9 +5,6 @@ import time
 
 
 class DataGenerator:
-    min_val = -10
-    max_val = 10
-
     def __init__(self, high, interval, path, numpy=False):
         self.low = 0
         self.high = high
@@ -16,7 +13,7 @@ class DataGenerator:
         self.numpy = numpy
 
     def generate_matrix(self, n, m):
-        return matrix.generate_matrix(n, m, DataGenerator.min_val, DataGenerator.max_val)
+        return matrix.generate_matrix(n, m)
 
     def get_performance(self, matrix_1, matrix_2):
         return matrix._time(matrix.multiply, matrix_1, matrix_2)
@@ -33,6 +30,7 @@ class DataGenerator:
             csv_writer.writerow(["Input", "Time"])
             if not self.numpy:
                 for i in range(self.low, self.high + 1, self.interval):
+                    print(i)
                     data = self.get_input_vs_time(i)
                     csv_writer.writerow(data)
             else:

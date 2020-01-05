@@ -1,7 +1,10 @@
 import time
 from random import randint
+from numba import jit
+import numpy as np
 
 
+@jit(nopython=True)
 def multiply(m1, m2):
     product = []
     # loop through the rows in m1
@@ -19,12 +22,8 @@ def multiply(m1, m2):
     return product
 
 
-def generate_matrix(n, m, low, high):
-    matrix = []
-    for i in range(n):
-        row = [randint(low, high) for i in range(m)]
-        matrix.append(row)
-    return matrix
+def generate_matrix(n, m):
+    return np.random.rand(n, m)
 
 
 def _time(func, m1, m2):
