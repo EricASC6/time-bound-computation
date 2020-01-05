@@ -28,11 +28,11 @@ To Do:
    ||- Format:
    Input (n) | Time
 5. Learn about numpy arrays 
-   ||- Why are they faster than regular lists? ()
+   ||- Why are they faster than regular lists? (/)
 6. Repeat the same process above for numpy arrays (/)
 7. In the main program 
    ||- Read the csv files (/)
    ||- Plot them using plt (/)
-8. Try out @numba.jit and plot the data using it
-9. Integrate all the graphs to one to discern the patterns 
+8. Try out @numba.jit and plot the data using it (/)
+9. Integrate all the graphs to one to discern the patterns (/)
 
