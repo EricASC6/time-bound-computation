@@ -18,7 +18,7 @@ A python list can contain multiple data types within it such as ints, strings an
 booleans. It is flexible, dynamic and its type is not fixed.
 
 On the other hand, numpy multidimensional arrays are fixed, meaning that it can
-strictly contain one data type within. You would never find an int type and a string type together numpy arrays. What does this mean?
+strictly contain one data type within. You would never find an int type and a string type together in numpy arrays. What does this mean?
 
 SPEED!!!
 
